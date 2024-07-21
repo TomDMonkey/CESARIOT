@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application de Caisse</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+   <div class="tophead">Cesariot</div>
+
+    <button onclick="showMenu('history')">Historique</button>
+    <div id="main-menu">
+      <button onclick="showMenu('order')">Nouvelle Commande</button>
+    </div>
+
+    <div id="order-menu" style="display: none">
+        <div class="btn">
+      <button onclick="showSubMenu('boisson')">Boisson</button>
+      <button onclick="showSubMenu('aliment')">Aliment</button>
+    </div>
+      <div id="boisson-menu" style="display: none">
+        <h3>Boissons</h3>
+        <button onclick="promptQuantity('Biere 25cl', 5)">
+          Biere 25cl - 5.00 €
+        </button>
+        <button onclick="promptQuantity('Biere 50cl', 9)">
+          Biere 50cl - 9.00 €
+        </button>
+        <button onclick="promptQuantity('Vin', 5)">
+          Rosé/rouge/blanc - 5 €
+        </button>
+        <button onclick="promptQuantity('Cocktails', 9)">
+          Cocktails - 9 €
+        </button>
+        <button onclick="promptQuantity('Soda/eau', 3)">Soda/eau - 3 €</button>
+      </div>
+
+      <div id="aliment-menu" style="display: none">
+        <h3>Aliments</h3>
+        <button onclick="promptQuantity('Bun-bagnat', 12.0)">
+          Bun bagnat - 12.00 €
+        </button>
+        <button onclick="promptQuantity('Panisses', 5.0)">
+          Panisses - 5.00 €
+        </button>
+        <button onclick="promptQuantity('Tapenade', 8.0)">
+          Tapenade - 8.00 €
+        </button>
+        <button onclick="promptQuantity('Tarama', 8.0)">Tarama - 8.00 €</button>
+        <button onclick="promptQuantity('Creme de feta', 8.0)">
+          Creme de feta - 8.00 €
+        </button>
+        <button onclick="promptQuantity('Glace', 4.0)">Glace - 4.00 €</button>
+        <button onclick="promptQuantity('Pop-corn', 5.0)">
+          Pop-corn - 5.00 €
+        </button>
+      </div>
+    </div>
+
+    <div id="cart" style="display: none">
+      <h3>Commande</h3>
+      <ul id="order-list"></ul>
+      <p>Total : <span id="order-total">0.00</span> €</p>
+      <button onclick="submitOrder()">Soumettre la commande</button>
+    </div>
+
+    <div id="history-menu" style="display: none">
+      <h3>Historique des Commandes</h3>
+      <ul id="history-list"></ul>
+      <p>Chiffre d'affaire total : <span id="total-revenue">0.00</span> €</p>
+      <button onclick="clearHistory()">Effacer l'historique</button>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

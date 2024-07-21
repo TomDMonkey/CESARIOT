@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(142, 192, 204);
+  font-size: 18px;
+}
+
+#main-menu, #order-menu, #cart, #history-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  /* justify-content: center; */
+  /* display: flex; */
+  border: none;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.remove-button {
+  background-color: rgb(197, 68, 68);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+
+.tophead{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+h3 {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: rgb(51, 136, 48);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}
