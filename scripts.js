@@ -80,7 +80,7 @@ function submitOrder() {
             total: parseFloat(document.getElementById('order-total').textContent)
         });
         localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
-        alert('Commande soumise avec succès!');
+        // alert('Commande soumise avec succès!');
         currentOrder = [];
         updateOrderList();
         document.getElementById('order-menu').style.display = 'none';
